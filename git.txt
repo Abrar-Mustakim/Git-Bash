@@ -1,0 +1,67 @@
+First git repo
+
+
+then 
+
+git init
+
+
+to check status
+
+git status
+
+git add <Folder Name>
+
+git add --all
+
+git commit -m "My First Commit"
+
+
+git config --global user.email "sm.abrar.mustakim@g.bracu.ac.bd"
+
+
+git commit -m "My First Commit"
+
+
+ git commit
+
+
+if push got src error then
+git remote add origin https://github.com/Abrar-Mustakim/R-Programming-for-Data-Science.git
+git checkout -b master
+
+
+git push origin master
+
+
+
+Since the OP already reset and redone its commit on top of origin/main:
+
+git reset --mixed origin/main
+git add .
+git commit -m "This is a new commit for what I originally planned to be amended"
+git push origin main
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+git init
+git add <folder1> <folder2> <etc.>
+git commit -m "Your message about the commit"
+git remote add origin https://github.com/yourUsername/yourRepository.git
+git push -u origin master
+git push origin master
