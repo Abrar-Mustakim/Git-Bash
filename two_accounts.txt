@@ -1,0 +1,46 @@
+ssh-keygen -t rsa -b 4096 -C "sm.abrar.mustakim@g.bracu.ac.bd"
+Enter file in which to save the key (/home/your_user/.ssh/id_rsa): /home/mustakim/.ssh/id_gsuite
+
+# Start the SSH agent
+eval "$(ssh-agent -s)"
+
+# Add the new SSH key
+ssh-add ~/.ssh/id_gsuite
+
+
+nano ~/.ssh/config
+'''
+# GitHub Account 1 (e.g., personal)
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa
+
+# GitHub Account 2 (G Suite)
+Host github-gsuite
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_gsuite
+'''
+
+ssh-add -l
+
+ssh -T git@github.com
+
+ssh -T git@github-gsuite
+
+
+#When Cloning a project using the ssh
+#Remember to put the host id github-gsuite after git@
+
+git clone git@github-gsuite:Abrar-Mustakim/BJIT-FINAL-PRoject.git
+
+
+#also check for the mail and name in config
+git config --global user.name "Abrar-Mustakim"
+git config --global user.email "sm.abrar.mustakim@g.bracu.ac.bd"
+git config --list
+
+
+
+
