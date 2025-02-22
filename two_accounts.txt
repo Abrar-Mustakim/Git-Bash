@@ -25,6 +25,13 @@ Host github-gsuite
 
 ssh-add -l
 
+#Add this
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_25519
+ssh-add ~/.ssh/id_bjit
+
+
+
 ssh -T git@github.com
 
 ssh -T git@github-gsuite
